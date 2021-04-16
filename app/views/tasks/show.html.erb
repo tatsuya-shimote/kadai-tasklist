@@ -1,18 +1,6 @@
 <h1>id:<%= @task.id %>のタスク詳細</h1>
 
-<table>
-   <tbody>
-        <tr>
-            <th>タスク名</th>
-            <td><%= @task.content%></td>
-        </tr>
-        
-        <tr>
-            <th>作成日</th>
-            <td><%= @task.created_at.getlocal("+09:00")%></td>
-        </tr>
-    </tbody>
-</table>
+<p><%= @task.content %></p>
 
 
 
