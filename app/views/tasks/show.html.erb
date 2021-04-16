@@ -1,0 +1,21 @@
+<h1>id:<%= @task.id %>のタスク詳細</h1>
+
+<table>
+   <tbody>
+        <tr>
+            <th>タスク名</th>
+            <td><%= @task.content%></td>
+        </tr>
+        
+        <tr>
+            <th>作成日</th>
+            <td><%= @task.created_at.getlocal("+09:00")%></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<%= link_to "タスク一覧に戻る", tasks_path%>
+<%= link_to "タスクの訂正をする。", edit_task_path(@task)%>
+<%= link_to 'このタスクを削除する', @task, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
