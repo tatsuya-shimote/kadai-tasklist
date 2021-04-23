@@ -1,6 +1,5 @@
-<% if logged_in? %>
-  <p><%= current_user.name %>さん、お疲れ様です。</p>
-  <h1>タスク一覧</h1>
+<p><%= current_user.name %>さん、お疲れ様です。</p>
+<h1>タスク一覧</h1>
 
 <% @tasks.each do |task| %>
 <ul>
@@ -11,12 +10,4 @@
 
 <%=link_to "新たなタスクを登録する。", new_task_path%>
 <%= link_to 'ログアウト', logout_path, method: :delete %>
-<% else %>
-  <div class="center jumbotron">
-    <div class="text-center">
-      <h1>Welcome to the Microposts</h1>
-      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
-    </div>
-  </div>
-<% end %>
 
